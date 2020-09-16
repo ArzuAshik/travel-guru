@@ -91,7 +91,7 @@ const Navbar = () => {
                         <Link to='contact'>Contact</Link>
                         <MuiThemeProvider theme={redTheme}>
                             <Link to='/login'>
-                                <Button color="primary" variant="contained" href="#contained-buttons">Login</Button>
+                                <Button color="primary" variant="contained">Login</Button>
                             </Link>
                         </MuiThemeProvider>
                     </div>
