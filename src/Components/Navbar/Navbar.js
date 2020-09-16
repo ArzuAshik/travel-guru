@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
     },
     search: {
         position: 'relative',
+        border: '1px solid #fafafa',
         borderRadius: theme.shape.borderRadius,
         backgroundColor: fade(theme.palette.common.white, 0.15),
         '&:hover': {
@@ -41,9 +42,10 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        color: '#fff',
     },
     inputRoot: {
-        color: 'inherit',
+        color: '#fff',
     },
     inputInput: {
         padding: theme.spacing(1, 1, 1, 0),
