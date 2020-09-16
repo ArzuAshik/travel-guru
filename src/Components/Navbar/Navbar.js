@@ -90,7 +90,9 @@ const Navbar = () => {
                         <Link to='blog'>Blog</Link>
                         <Link to='contact'>Contact</Link>
                         <MuiThemeProvider theme={redTheme}>
-                            <Button color="primary" variant="contained" href="#contained-buttons">Login</Button>
+                            <Link to='/login'>
+                                <Button color="primary" variant="contained" href="#contained-buttons">Login</Button>
+                            </Link>
                         </MuiThemeProvider>
                     </div>
 
