@@ -6,7 +6,9 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
-import logo from '../../Image/Logo.png';
+import LogoWhite from '../../Image/Logo.png';
+import LogoBlack from '../../Image/Logo2.png';
+
 import { Link } from 'react-router-dom';
 import { Button, createMuiTheme, MuiThemeProvider } from '@material-ui/core';
 import { orange } from '@material-ui/core/colors';
@@ -62,14 +64,14 @@ const useStyles = makeStyles((theme) => ({
 
 const orangeTheme = createMuiTheme({ palette: { primary: orange } })
 
-const Navbar = () => {
+const Navbar = ({logo}) => {
     const classes = useStyles();
     return (
         <div style={{ maxWidth: '1200px', margin: '0 auto' }} className="container">
             <AppBar style={{ padding: '10px' }} color='transparent' position="static">
                 <Toolbar>
                     <Link to='/'>
-                        <img style={{ height: '50px' }} src={logo} alt="Logo" />
+                        <img style={{ height: '50px' }} src={logo ? LogoBlack : LogoWhite} alt="Logo" />
                     </Link>
 
                     <div className={classes.search}>
@@ -86,7 +88,7 @@ const Navbar = () => {
                         />
                     </div>
 
-                    <div className="nav-link">
+                    <div className={logo ? "nav-link-black" : "nav-link"}>
                         <Link to='news'>News</Link>
                         <Link to='destination'>Destination</Link>
                         <Link to='blog'>Blog</Link>

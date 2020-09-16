@@ -1,0 +1,33 @@
+.login-form{
+    width: 30vw;
+    min-width: 400px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.login-form form{
+    border: 1px solid gray;
+    padding: 20px 50px;
+    border-radius: 10px;
+}
+
+.social-login{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.social-login p{
+    border: 1px solid gray;
+    border-radius: 50px;
+    display: inline-block;
+    padding: 10px;
+    display: flex;
+}
+
+.social-login p span{
+    margin-left: 60px;
+}
+
+.social-login img{
+    height: 30px;
+}

@@ -31,10 +31,10 @@ const Booking = () => {
                 </div>
                 <div className="booking-form">
                     <form className='' noValidate autoComplete="off">
-                        <TextField style={{width: '100%'}} label="Origin" variant="filled" />
+                        <TextField fullWidth label="Origin" variant="filled" />
                         <br />
                         <br />
-                        <TextField style={{width: '100%'}} label="Destination" variant="filled" />
+                        <TextField fullWidth label="Destination" variant="filled" />
                         <br />
                         <br />
                         <MuiPickersUtilsProvider utils={DateFnsUtils}>
