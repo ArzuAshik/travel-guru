@@ -1,0 +1,36 @@
+.booking{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../../Image/Rectangle-1.png');
+    min-height: 100vh;
+    background-size: cover;
+}
+.booking-container{
+    display: flex;
+    width: 80vw;
+    max-width: 1200px;
+    min-height: 60vh;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.booking-container div{
+    flex: 1;
+}
+
+.booking-container h1{
+    font-size: 56px;
+}
+
+.booking-details{
+    margin-right: 100px;
+    color: #fff;
+}
+
+.booking-details p{
+    color: #fafafa;
+}
+
+.booking-form form{
+    background-color: #fafafa;
+    padding: 20px;
+    margin-left: 100px;
+}
