@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-const redTheme = createMuiTheme({ palette: { primary: orange } })
+const orangeTheme = createMuiTheme({ palette: { primary: orange } })
 
 const Navbar = () => {
     const classes = useStyles();
@@ -91,7 +91,7 @@ const Navbar = () => {
                         <Link to='destination'>Destination</Link>
                         <Link to='blog'>Blog</Link>
                         <Link to='contact'>Contact</Link>
-                        <MuiThemeProvider theme={redTheme}>
+                        <MuiThemeProvider theme={orangeTheme}>
                             <Link to='/login'>
                                 <Button color="primary" variant="contained">Login</Button>
                             </Link>

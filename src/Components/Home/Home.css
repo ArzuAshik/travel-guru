@@ -1,6 +1,33 @@
 .home-page{
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../../Image/Rectangle 1.png');
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../../Image/Rectangle-1.png');
     background-size: cover;
     background-color: #000;
     min-height: 100vh;
+}
+
+.home-content{
+    display: flex;
+    width: 90vw;
+    margin-left: 10vw;
+    margin-top: 10vh;
+}
+
+.home-content div{
+    flex: 1;
+}
+
+.location-details{
+    padding-right: 150px;
+}
+
+.location-details h1, .location-details p{
+    color: #fff;
+}
+
+.location-details h1{
+    font-size: 56px;
+}
+
+.location-slider{
+    display: flex;
 }

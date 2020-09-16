@@ -1,0 +1,17 @@
+.slider-card{
+    height: 350px;
+    width: 250px;
+    border: 3px solid orange;
+    border-radius: 20px;
+    position: relative;
+    margin-top: 100px;
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.slider-card h3{
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    color: #fff;
+}
