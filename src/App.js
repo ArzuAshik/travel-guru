@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, createContext } from 'react';
 import Navbar from './Components/Navbar/Navbar';
 import './App.css';
 import {
@@ -11,26 +11,32 @@ import Home from './Components/Home/Home';
 import Booking from './Components/Booking/Booking';
 import Login from './Components/Login/Login';
 import ConfirmBooking from './Components/ConfirmBooking/ConfirmBooking';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+
+export const UserContext = createContext();
 
 function App() {
-  
+  const [loggedInUser, setLoggedInUser] = useState({ email: '' });
 
   return (
     <Router>
+      <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+        <h1>Email: {loggedInUser.email}</h1>
         <Switch>
           <Route exact path='/'>
-            <Home/>
+            <Home />
           </Route>
           <Route path='/booking-:locationID'>
-            <Booking/>
+            <Booking />
           </Route>
           <Route path='/login'>
-            <Login/>
+            <Login />
           </Route>
-          <Route path='/confirm-booking-:locationID'>
-            <ConfirmBooking/>
-          </Route>
+          <PrivateRoute path='/confirm-booking-:locationID'>
+            <ConfirmBooking />
+          </PrivateRoute>
         </Switch>
+      </UserContext.Provider>
     </Router>
   );
 }

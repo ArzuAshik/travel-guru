@@ -3,6 +3,7 @@ import './Hotel.css';
 
 const Hotel = ({hotel}) => {
     const {hotelImage, price, rating} = hotel;
+    console.log(hotelImage);
     return (
         <div className='hotel'>
             <div className="hotel-image">

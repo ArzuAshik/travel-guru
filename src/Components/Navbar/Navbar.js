@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Navbar.css';
 
 import { fade, makeStyles } from '@material-ui/core/styles';
@@ -12,6 +12,10 @@ import LogoBlack from '../../Image/Logo2.png';
 import { Link } from 'react-router-dom';
 import { Button, createMuiTheme, MuiThemeProvider } from '@material-ui/core';
 import { orange } from '@material-ui/core/colors';
+import { UserContext } from '../../App';
+
+import * as firebase from "firebase/app";
+import "firebase/auth";
 
 const useStyles = makeStyles((theme) => ({
     title: {
@@ -64,8 +68,17 @@ const useStyles = makeStyles((theme) => ({
 
 const orangeTheme = createMuiTheme({ palette: { primary: orange } })
 
-const Navbar = ({logo}) => {
+const Navbar = ({ logo }) => {
     const classes = useStyles();
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
+    const handleLogout = () => {
+        firebase.auth().signOut().then(function() {
+            setLoggedInUser({email: ''});
+          })
+          .catch(function(error) {
+          });          
+    }
     return (
         <div style={{ maxWidth: '1200px', margin: '0 auto' }} className="container">
             <AppBar style={{ padding: '10px' }} color='transparent' position="static">
@@ -94,9 +107,14 @@ const Navbar = ({logo}) => {
                         <Link to='blog'>Blog</Link>
                         <Link to='contact'>Contact</Link>
                         <MuiThemeProvider theme={orangeTheme}>
-                            <Link to='/login'>
-                                <Button color="primary" variant="contained">Login</Button>
-                            </Link>
+                            {
+                                loggedInUser.email ?
+                                    <Button onClick={handleLogout} color="primary" variant="contained">Logout</Button>
+                                    :
+                                    <Link to='/login'>
+                                        <Button color="primary" variant="contained">Login</Button>
+                                    </Link>
+                            }
                         </MuiThemeProvider>
                     </div>
 

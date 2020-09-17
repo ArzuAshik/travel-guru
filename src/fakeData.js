@@ -37,19 +37,25 @@ export const fakeData = [
         thumbnail: 'https://i.ibb.co/KjMJN74/Sajek.png',
         hotels: [
             {
+                hotelID: 0,
                 hotelTitle: "Light bright airy stylish apt & safe peaceful stay",
+                hotelImage: "https://i.ibb.co/TtcjbHX/Rectangle-26.png",
                 price: "$34",
-                rating: '4.9 (12)'
+                rating: '4.9 (44)'
             },
             {
+                hotelID: 1,
                 hotelTitle: "Apartment in Lost Panorama",
+                hotelImage: "https://i.ibb.co/RHyKW5P/Rectangle-27.png",
                 price: "$52",
-                rating: '4.8 (71)'
+                rating: '4.8 (10)'
             },
             {
+                hotelID: 2,
                 hotelTitle: "AR Lounge & Pool (r&r + b&b)",
+                hotelImage: "https://i.ibb.co/CzWhmVV/Rectangle-28.png",
                 price: "$44",
-                rating: '4.9 (65)'
+                rating: '4.9 (25)'
             }
         ]
     },
@@ -61,19 +67,25 @@ export const fakeData = [
         thumbnail: 'https://i.ibb.co/sRTf0Bv/sundorbon.png',
         hotels: [
             {
+                hotelID: 0,
                 hotelTitle: "Light bright airy stylish apt & safe peaceful stay",
+                hotelImage: "https://i.ibb.co/TtcjbHX/Rectangle-26.png",
                 price: "$34",
-                rating: '4.9 (25)'
+                rating: '4.9 (44)'
             },
             {
+                hotelID: 1,
                 hotelTitle: "Apartment in Lost Panorama",
+                hotelImage: "https://i.ibb.co/RHyKW5P/Rectangle-27.png",
                 price: "$52",
-                rating: '4.8 (30)'
+                rating: '4.8 (10)'
             },
             {
+                hotelID: 2,
                 hotelTitle: "AR Lounge & Pool (r&r + b&b)",
+                hotelImage: "https://i.ibb.co/CzWhmVV/Rectangle-28.png",
                 price: "$44",
-                rating: '4.9 (17)'
+                rating: '4.9 (25)'
             }
         ]
     },

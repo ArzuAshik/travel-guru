@@ -14,6 +14,7 @@
 .social-login{
     width: 70%;
     margin: 0 auto;
+    cursor: pointer;
 }
 
 .social-login p{
@@ -22,6 +23,12 @@
     display: inline-block;
     padding: 10px;
     display: flex;
+    transition: .2s;
+}
+
+.social-login p:hover{
+    background: #fafafa;
+    box-shadow: 2px 2px 2px gray;
 }
 
 .social-login p span{
@@ -30,4 +37,18 @@
 
 .social-login img{
     height: 30px;
+}
+
+.login-form form p span{
+    color: orange;
+    text-decoration: underline;
+    cursor: pointer
+}
+
+.success-message{
+    color: green;
+}
+
+.error-message{
+    color: red;
 }
