@@ -4,10 +4,11 @@ import Navbar from '../Navbar/Navbar';
 import Hotel from '../Hotel/Hotel';
 import { useParams } from 'react-router-dom';
 import { fakeData } from '../../fakeData';
+import GMap from '../GMap/GMap';
 
 const ConfirmBooking = () => {
     const { locationID } = useParams();
-    const { locationTitle, hotels } = fakeData[locationID];
+    const { locationTitle, hotels, mapLocation } = fakeData[locationID];
     return (
         <>
             <Navbar logo='black' />
@@ -22,7 +23,7 @@ const ConfirmBooking = () => {
                     }
                 </div>
                 <div className="map">
-                    Google Map
+                    <GMap mapLocation={mapLocation}/>
                 </div>
             </div>
         </>
