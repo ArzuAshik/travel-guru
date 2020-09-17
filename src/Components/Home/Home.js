@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../Navbar/Navbar';
 import './Home.css'
 import LocationDetails from '../LocationDetails/LocationDetails';
 import SliderCard from '../SliderCard/SliderCard';
+import { fakeData } from '../../fakeData';
 
 const Home = () => {
+    const [locationInfo, setLocationInfo] = useState(fakeData);
+    
     return (
         <div className='home-page'>
             <Navbar/>
@@ -14,9 +17,9 @@ const Home = () => {
                     <LocationDetails />
                 </div>
                 <div className="location-slider">
-                    <SliderCard/>
-                    <SliderCard/>
-                    <SliderCard/>
+                    {
+                        locationInfo.map(location => <SliderCard key={location.id} location={location}/>)
+                    }
                 </div>
             </div>
         </div>

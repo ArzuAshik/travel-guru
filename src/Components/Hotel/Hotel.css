@@ -1,0 +1,11 @@
+.hotel{
+    display: flex;
+}
+
+.hotel div{
+    flex: 1;
+}
+
+.hotel-image img{
+    width: 100%;
+}

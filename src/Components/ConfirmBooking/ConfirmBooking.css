@@ -1,0 +1,14 @@
+.confirm-booking-container{
+    display: flex;
+    max-width: 1200px;
+    width: 80vw;
+    margin: 50px auto;
+}
+
+.confirm-booking-container div{
+    flex: 1;
+}
+
+.confirm-booking-container .map{
+    margin-top: 20px;
+}

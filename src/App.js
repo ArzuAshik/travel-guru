@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './Components/Navbar/Navbar';
 import './App.css';
 import {
@@ -10,8 +10,11 @@ import {
 import Home from './Components/Home/Home';
 import Booking from './Components/Booking/Booking';
 import Login from './Components/Login/Login';
+import ConfirmBooking from './Components/ConfirmBooking/ConfirmBooking';
 
 function App() {
+  
+
   return (
     <Router>
         <Switch>
@@ -23,6 +26,9 @@ function App() {
           </Route>
           <Route path='/login'>
             <Login/>
+          </Route>
+          <Route path='/confirm-booking'>
+            <ConfirmBooking/>
           </Route>
         </Switch>
     </Router>
