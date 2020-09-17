@@ -55,7 +55,6 @@ const useStyles = makeStyles((theme) => ({
     },
     inputInput: {
         padding: theme.spacing(1, 1, 1, 0),
-        // vertical padding + font size from searchIcon
         paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
         transition: theme.transitions.create('width'),
         width: '100%',
@@ -80,7 +79,7 @@ const Navbar = ({ logo }) => {
           });          
     }
     return (
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }} className="container">
+        <div className="navbar">
             <AppBar style={{ padding: '10px' }} color='transparent' position="static">
                 <Toolbar>
                     <Link to='/'>

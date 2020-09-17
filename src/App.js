@@ -1,17 +1,16 @@
 import React, { useState, createContext } from 'react';
-import Navbar from './Components/Navbar/Navbar';
 import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Home from './Components/Home/Home';
 import Booking from './Components/Booking/Booking';
 import Login from './Components/Login/Login';
 import ConfirmBooking from './Components/ConfirmBooking/ConfirmBooking';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import NotFound from './Components/NotFound/NotFound';
 
 export const UserContext = createContext();
 
@@ -34,6 +33,9 @@ function App() {
           <PrivateRoute path='/confirm-booking-:locationID'>
             <ConfirmBooking />
           </PrivateRoute>
+          <Route path='/*'>
+            <NotFound />
+          </Route>
         </Switch>
       </UserContext.Provider>
     </Router>

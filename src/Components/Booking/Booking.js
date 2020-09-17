@@ -2,14 +2,10 @@ import React from 'react';
 import Navbar from '../Navbar/Navbar';
 import './Booking.css'
 import { TextField, Button, createMuiTheme, MuiThemeProvider } from '@material-ui/core';
-
 import 'date-fns';
 import Grid from '@material-ui/core/Grid';
 import DateFnsUtils from '@date-io/date-fns';
-import {
-    MuiPickersUtilsProvider,
-    KeyboardDatePicker,
-} from '@material-ui/pickers';
+import { MuiPickersUtilsProvider, KeyboardDatePicker } from '@material-ui/pickers';
 import { orange } from '@material-ui/core/colors';
 import { useParams, Link } from 'react-router-dom';
 import { fakeData } from '../../fakeData';
@@ -22,7 +18,7 @@ const Booking = () => {
 
     const orangeTheme = createMuiTheme({ palette: { primary: orange } })
     return (
-        <div className='booking' style={{backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${fakeData[locationID].thumbnail})`}}>
+        <div className='booking' style={{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${fakeData[locationID].thumbnail})` }}>
             <Navbar />
             <div className="booking-container">
                 <div className="booking-details">

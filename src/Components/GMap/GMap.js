@@ -3,11 +3,8 @@ import {
     withScriptjs,
     withGoogleMap,
     GoogleMap,
-    Marker,
-    Map,
-    GoogleApiWrapper
+    Marker
 } from "react-google-maps";
-import { useParams } from 'react-router-dom';
 
 
 class GMap extends React.Component {

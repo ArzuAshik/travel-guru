@@ -39,7 +39,7 @@ const Login = () => {
                 setFormInput(newInput);
             }
         } else if (e.target.name === 'password') {
-            const isPasswordValid = e.target.value.length > 7;
+            const isPasswordValid = e.target.value.length > 7 && /\d{1}/;
             if (isPasswordValid) {
                 const newInput = { ...formInput };
                 newInput.password = e.target.value;

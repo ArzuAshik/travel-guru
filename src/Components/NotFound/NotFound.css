@@ -1,0 +1,17 @@
+.not-found{
+    min-height: 100vh;
+    text-align: center;    
+    background: url('https://i.ibb.co/kxs9SMr/page-not-found.png');
+    background-size: cover;
+    overflow: hidden;
+    color: red;
+}
+
+.not-found h1{
+    font-size: 72px;
+    margin-top: 5vh;    
+}
+.not-found h3{
+    font-size: 32px;
+    margin-top: -50px;
+}
