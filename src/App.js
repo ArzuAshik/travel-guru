@@ -21,7 +21,7 @@ function App() {
           <Route exact path='/'>
             <Home/>
           </Route>
-          <Route path='/booking'>
+          <Route path='/booking-:locationID'>
             <Booking/>
           </Route>
           <Route path='/login'>

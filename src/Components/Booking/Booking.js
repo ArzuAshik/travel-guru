@@ -12,9 +12,14 @@ import {
     KeyboardDatePicker,
 } from '@material-ui/pickers';
 import { orange } from '@material-ui/core/colors';
+import { useParams } from 'react-router-dom';
+import { fakeData } from '../../fakeData';
 
 const Booking = () => {
     const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
+
+    const { locationID } = useParams();
+    const { locationTitle, destination } = fakeData[locationID];
 
     const handleDateChange = (date) => {
         setSelectedDate(date);
@@ -26,8 +31,8 @@ const Booking = () => {
             <Navbar />
             <div className="booking-container">
                 <div className="booking-details">
-                    <h1>COX'S Bazar</h1>
-                    <p>Cox’s Bazar is a town on the southeast coast of Bangladesh. It’s known for its very long, sandy beachfront, stretching from Sea Beach in the north to Kolatoli Beach in the south. Aggameda Khyang monastery is home to bronze statues and centuries-old Buddhist manuscripts. South of town, the tropical rainforest of Himchari National Park has waterfalls and many birds. North, sea turtles breed on nearby Sonadia Island.</p>
+                    <h1>{locationTitle}</h1>
+                    <p>{destination}</p>
                 </div>
                 <div className="booking-form">
                     <form className='' noValidate autoComplete="off">
@@ -66,7 +71,7 @@ const Booking = () => {
                             </Grid>
                         </MuiPickersUtilsProvider >
                         <MuiThemeProvider theme={orangeTheme}>
-                            <Button type="submit" style={{ textTransform: 'capitalize', display: 'block', width: '100%'}} color="primary" variant="contained">Start Booking</Button>
+                            <Button type="submit" style={{ textTransform: 'capitalize', display: 'block', width: '100%' }} color="primary" variant="contained">Start Booking</Button>
                         </MuiThemeProvider>
                     </form>
                 </div>
