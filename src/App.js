@@ -27,7 +27,7 @@ function App() {
           <Route path='/login'>
             <Login/>
           </Route>
-          <Route path='/confirm-booking'>
+          <Route path='/confirm-booking-:locationID'>
             <ConfirmBooking/>
           </Route>
         </Switch>

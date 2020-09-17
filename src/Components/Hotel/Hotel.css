@@ -6,6 +6,10 @@
     flex: 1;
 }
 
+.hotel-image{
+    padding: 20px;
+}
+
 .hotel-image img{
     width: 100%;
 }

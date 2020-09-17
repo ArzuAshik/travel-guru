@@ -7,19 +7,25 @@ export const fakeData = [
         thumbnail: 'https://i.ibb.co/h82WD25/Rectangle-1.png',
         hotels: [
             {
+                hotelID: 0,
                 hotelTitle: "Light bright airy stylish apt & safe peaceful stay",
+                hotelImage: "https://i.ibb.co/TtcjbHX/Rectangle-26.png",
                 price: "$34",
-                rating: '4.9'
+                rating: '4.9 (44)'
             },
             {
+                hotelID: 1,
                 hotelTitle: "Apartment in Lost Panorama",
+                hotelImage: "https://i.ibb.co/RHyKW5P/Rectangle-27.png",
                 price: "$52",
-                rating: '4.8'
+                rating: '4.8 (10)'
             },
             {
+                hotelID: 2,
                 hotelTitle: "AR Lounge & Pool (r&r + b&b)",
+                hotelImage: "https://i.ibb.co/CzWhmVV/Rectangle-28.png",
                 price: "$44",
-                rating: '4.9'
+                rating: '4.9 (25)'
             }
         ]
     },
@@ -33,17 +39,17 @@ export const fakeData = [
             {
                 hotelTitle: "Light bright airy stylish apt & safe peaceful stay",
                 price: "$34",
-                rating: '4.9'
+                rating: '4.9 (12)'
             },
             {
                 hotelTitle: "Apartment in Lost Panorama",
                 price: "$52",
-                rating: '4.8'
+                rating: '4.8 (71)'
             },
             {
                 hotelTitle: "AR Lounge & Pool (r&r + b&b)",
                 price: "$44",
-                rating: '4.9'
+                rating: '4.9 (65)'
             }
         ]
     },
@@ -57,17 +63,17 @@ export const fakeData = [
             {
                 hotelTitle: "Light bright airy stylish apt & safe peaceful stay",
                 price: "$34",
-                rating: '4.9'
+                rating: '4.9 (25)'
             },
             {
                 hotelTitle: "Apartment in Lost Panorama",
                 price: "$52",
-                rating: '4.8'
+                rating: '4.8 (30)'
             },
             {
                 hotelTitle: "AR Lounge & Pool (r&r + b&b)",
                 price: "$44",
-                rating: '4.9'
+                rating: '4.9 (17)'
             }
         ]
     },

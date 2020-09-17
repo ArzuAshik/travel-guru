@@ -8,26 +8,21 @@ import Grid from '@material-ui/core/Grid';
 import DateFnsUtils from '@date-io/date-fns';
 import {
     MuiPickersUtilsProvider,
-    KeyboardTimePicker,
     KeyboardDatePicker,
 } from '@material-ui/pickers';
 import { orange } from '@material-ui/core/colors';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { fakeData } from '../../fakeData';
 
 const Booking = () => {
-    const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
+    const [selectedDate] = React.useState(new Date());
 
     const { locationID } = useParams();
     const { locationTitle, destination } = fakeData[locationID];
 
-    const handleDateChange = (date) => {
-        setSelectedDate(date);
-    };
-
     const orangeTheme = createMuiTheme({ palette: { primary: orange } })
     return (
-        <div className='booking'>
+        <div className='booking' style={{backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${fakeData[locationID].thumbnail})`}}>
             <Navbar />
             <div className="booking-container">
                 <div className="booking-details">
@@ -35,7 +30,7 @@ const Booking = () => {
                     <p>{destination}</p>
                 </div>
                 <div className="booking-form">
-                    <form className='' noValidate autoComplete="off">
+                    <form noValidate autoComplete="off">
                         <TextField fullWidth label="Origin" variant="filled" />
                         <br />
                         <br />
@@ -52,7 +47,6 @@ const Booking = () => {
                                     id="date-picker-inline"
                                     label="From"
                                     value={selectedDate}
-                                    onChange={handleDateChange}
                                     KeyboardButtonProps={{
                                         'aria-label': 'change date',
                                     }}
@@ -63,7 +57,6 @@ const Booking = () => {
                                     label="To"
                                     format="MM/dd"
                                     value={selectedDate}
-                                    onChange={handleDateChange}
                                     KeyboardButtonProps={{
                                         'aria-label': 'change date',
                                     }}
@@ -71,7 +64,9 @@ const Booking = () => {
                             </Grid>
                         </MuiPickersUtilsProvider >
                         <MuiThemeProvider theme={orangeTheme}>
-                            <Button type="submit" style={{ textTransform: 'capitalize', display: 'block', width: '100%' }} color="primary" variant="contained">Start Booking</Button>
+                            <Link to={`confirm-booking-${locationID}`}>
+                                <Button type="submit" style={{ textDecoration: 'capitalize', display: 'block', width: '100%' }} color="primary" variant="contained">Start Booking</Button>
+                            </Link>
                         </MuiThemeProvider>
                     </form>
                 </div>

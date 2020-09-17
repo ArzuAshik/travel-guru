@@ -5,10 +5,12 @@
     margin: 50px auto;
 }
 
-.confirm-booking-container div{
+.confirm-booking-container > div{
     flex: 1;
 }
 
 .confirm-booking-container .map{
     margin-top: 20px;
+    padding: 30px;
+    border: 1px solid gray;
 }
