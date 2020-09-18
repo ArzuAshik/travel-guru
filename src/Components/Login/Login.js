@@ -10,7 +10,9 @@ import googleIcon from '../../Icon/google.png';
 import * as firebase from "firebase/app";
 import "firebase/auth";
 import { firebaseConfig } from '../../firebaseConfig/firebaseConfig';
+
 import { useHistory, useLocation } from 'react-router-dom';
+import { testValid } from './validator';
 
 const Login = () => {
     let history = useHistory();
@@ -31,33 +33,11 @@ const Login = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     const handleFormInput = (e) => {
-        if (e.target.name === 'email') {
-            const isEmailValid = /\S+@\S+\.\S+/.test(e.target.value);
-            if (isEmailValid) {
-                const newInput = { ...formInput };
-                newInput.email = e.target.value;
-                setFormInput(newInput);
-            }
-        } else if (e.target.name === 'password') {
-            const isPasswordValid = e.target.value.length > 7 && /\d{1}/;
-            if (isPasswordValid) {
-                const newInput = { ...formInput };
-                newInput.password = e.target.value;
-                setFormInput(newInput);
-            }
-        } else if (e.target.name === 'name') {
-            const isNameValid = e.target.value.length > 4;
-            if (isNameValid) {
-                const newInput = { ...formInput };
-                newInput.name = e.target.value;
-                setFormInput(newInput);
-            }
-        } else if (e.target.name === 'confirmPassword') {
-            if (formInput.password === e.target.value) {
-                const newInput = { ...formInput };
-                newInput.confirmPassword = e.target.value;
-                setFormInput(newInput);
-            }
+        const isInputValid = testValid(e.target, formInput.password);
+        if (isInputValid) {
+            const newInput = { ...formInput };
+            newInput[e.target.name] = e.target.value;
+            setFormInput(newInput);
         }
     }
 
@@ -118,11 +98,13 @@ const Login = () => {
 
     }
 
+
     return (
         <div>
             <Navbar logo='black' />
             <div className="login-form">
                 {message.msg && <h4 className={message.success ? 'success-message' : 'error-message'}>{message.msg}</h4>}
+                
                 <form onSubmit={handleFormSubmit}>
                     <h3>{isNewUser ? 'Create an account' : 'Login'}</h3>
                     {

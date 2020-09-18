@@ -33,7 +33,7 @@ function App() {
           <PrivateRoute path='/confirm-booking-:locationID'>
             <ConfirmBooking />
           </PrivateRoute>
-          <Route path='/*'>
+          <Route path="*">
             <NotFound />
           </Route>
         </Switch>
