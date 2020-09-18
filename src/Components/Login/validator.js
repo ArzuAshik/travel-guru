@@ -6,7 +6,7 @@ export const testValid = (e, password) => {
         const isPasswordValid = e.value.length > 7 && /\d{1}/;
         return isPasswordValid;
     } else if (e.name === 'name') {
-        const isNameValid = e.value.length > 4;
+        const isNameValid = e.value.length > 3;
         return isNameValid;
     } else if (e.name === 'confirmPassword') {
         return password === e.value;
