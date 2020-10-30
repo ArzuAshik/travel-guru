@@ -20,12 +20,9 @@ An Admin can remove any volunteer anytime. Admin can also add a new volunteer ev
 
 ### Features
 
-- Register for any volunteer service
-- Search option for volunteer service.
-- Registered volunteers list for admin
-- Add a new volunteer event option for the admin
-- Google Login
-- Remove a volunteer option for the admin
+- A front-end website that can find the best hotels based on the user's selected location.
+- Login with email & password, google, Facebook
+- Show map of the location chosen
 
 ---
 
