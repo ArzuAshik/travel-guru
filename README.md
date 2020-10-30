@@ -4,8 +4,7 @@
 
 [Live Site](travel-guru-arzu.netlify.app/)
 
-Travel Guru is a front end Site. A User can register for any volunteer event. To register for a volunteer service user needs to login with Google. After registering, a volunteer service user can see his/her registered volunteer service list.
-An Admin can remove any volunteer anytime. Admin can also add a new volunteer event.
+Travel Guru is a front end Site. User can find the best hotels of selected location. User can also see the map ot the location.
 
 ---
 
