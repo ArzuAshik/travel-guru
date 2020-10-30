@@ -4,8 +4,6 @@
 
 [Live Site](travel-guru-arzu.netlify.app/)
 
----
-
 Travel Guru is a front end Site. A User can register for any volunteer event. To register for a volunteer service user needs to login with Google. After registering, a volunteer service user can see his/her registered volunteer service list.
 An Admin can remove any volunteer anytime. Admin can also add a new volunteer event.
 
@@ -15,11 +13,8 @@ An Admin can remove any volunteer anytime. Admin can also add a new volunteer ev
 
 - ReactJS
 - React Router
-- NodeJS
 - Material UI
 - Firebase Authentication
-- MongoDB
-- Express
 
 ---
 
