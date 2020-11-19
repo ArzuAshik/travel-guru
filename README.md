@@ -2,7 +2,7 @@
 
 # Travel Guru
 
-[Live Site](travel-guru-arzu.netlify.app/)
+[Live Site](https://travel-guru-arzu.netlify.app/)
 
 Travel Guru is a front end Site. User can find the best hotels of selected location. User can also see the map ot the location.
 
